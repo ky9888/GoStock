@@ -45,7 +45,7 @@ const Header = () => {
           Home
         </div>
         <div
-          onClick={() => handleNavigation("/dashboard")}
+          onClick={() => handleNavigation("/Dashboard")}
           className={`px-5 py-2 rounded-full cursor-pointer hover:bg-slate-600 ${
             pathName === "/Dashboard" ? "bg-slate-700" : ""
           }`}
