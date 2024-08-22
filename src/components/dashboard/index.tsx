@@ -29,17 +29,25 @@ import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import Slide from "../slide";
 import { UserHook } from "../hook/userHook";
+import { useRouter } from "next/navigation";
 
 const Dashboard = () => {
   const [drop, setDrop] = useState(true);
-  const { getUserId } = UserHook();
+  const { getUserId,setGetUserId } = UserHook();
   const [theme, setTheme] = useState("light");
-  const element = document.documentElement;
+  const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+  const Logout = () => {
+    localStorage.removeItem("accessToken");
+    setGetUserId(null)
+    router.push("/")
+  };
   const option = [
     { icon: <MdLightMode />, text: "light" },
     { icon: <MdDarkMode />, text: "dark" },
   ];
   useEffect(() => {
+    const element = document.documentElement;
     switch (theme) {
       case "dark":
         element.classList.add("dark");
@@ -50,7 +58,7 @@ const Dashboard = () => {
       default:
         break;
     }
-  }, [theme, element.classList]);
+  }, [theme]);
 
   return (
     <div
@@ -184,7 +192,7 @@ const Dashboard = () => {
               ))}
             </div>
           </div>
-          <div className="flex items-center space-x-4 max-lg:flex max-lg:justify-end">
+          <div className="flex items-center space-x-4  max-lg:flex max-lg:justify-end">
             <p className="text-[22px]">
               <MdOutlineMailOutline />
             </p>
@@ -204,22 +212,29 @@ const Dashboard = () => {
             </p>
             {!getUserId?.userName ? (
               <>
-                <div className=" flex space-x-1">
+                <div className=" cursor-pointer flex space-x-1">
                   <p className="text-[15px] font-medium">Nguyen van ky</p>
                   <p>
                     <FaSortDown />
                   </p>
+                 
                 </div>
+                
               </>
             ) : (
               <>
-                <div className=" flex space-x-1">
+                <div  onClick={()=>setIsOpen(!isOpen)} className="relative  cursor-pointer flex space-x-1">
                   <p className="text-[15px] font-medium">
                     {getUserId?.userName}
                   </p>
                   <p>
                     <FaSortDown />
                   </p>
+                  {isOpen && (
+                  <button onClick={Logout} className="px-3 py-1 top-[20px] left-0 hover:bg-slate-100 text-red-500 rounded-full absolute" >
+                    Logout
+                  </button>
+                )}
                 </div>
               </>
             )}

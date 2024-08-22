@@ -23,7 +23,7 @@ const Header = () => {
   };
   return (
     <div
-      className={`${item}  dark:bg-slate-100 dark:text-black  py-5 px-[7%] bg-gray-900 text-slate-200 text-[15px] sticky z-10 top-0 w-full `}
+      className={`${item}   dark:text-white  py-5 px-[7%] bg-gray-900 text-slate-200 text-[15px] sticky z-10 top-0 w-full `}
     >
       <div className={`${item} space-x-1 max-md:hidden `}>
         <p className="bg-white p-1 rounded-full">
@@ -45,7 +45,7 @@ const Header = () => {
           Home
         </div>
         <div
-          onClick={() => handleNavigation("/Dashboard")}
+          onClick={() => handleNavigation("/dashboard")}
           className={`px-5 py-2 rounded-full cursor-pointer hover:bg-slate-600 ${
             pathName === "/Dashboard" ? "bg-slate-700" : ""
           }`}

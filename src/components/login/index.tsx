@@ -58,7 +58,7 @@ const LoginForm: React.FC = () => {
         .then(function (res) {
           console.log(res);
           alert("Đăng nhập thành công");
-          router.push("/");
+          router.push("/dashboard");
           localStorage.setItem("accessToken", res.data.accessToken);
 
           console.log(res.data.accessToken);
