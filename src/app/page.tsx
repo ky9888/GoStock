@@ -118,7 +118,7 @@ export default function Home() {
           ></Image>
         </li>
       </ul>
-      <div className="mx-[22%] max-md:block max-xl:mx-10 flex mt-10 px-10">
+      <div className="mx-[22%] max-md:block max-xl:mx-10 flex mt-10 px-10 max-sm:mx-2">
         <div className="relative w-full ">
           <div className="  py-6 px-10 bg-gradient-to-b from-indigo-800 to-indigo-950  blur-[1px] rounded-3xl ">
             <div className=" bg-white p-3 rounded-lg ">
