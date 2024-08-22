@@ -2,13 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+.slick-prev,
+.slick-next {
+  color: #007bff; /* Màu xanh */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #0056b3; /* Màu xanh đậm hơn khi di chuột */
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #007bff; /* Màu xanh của biểu tượng nút */
+  font-size: 20px; /* Điều chỉnh kích thước nếu cần */
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -30,4 +46,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
