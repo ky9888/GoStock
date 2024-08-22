@@ -215,7 +215,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex max-xl:hidden items-center rounded-xl w-[360px] p-3 h- left-[20px] justify-between text-[12px] pt-3  absolute bg-slate-100 shadow-md  opacity-100 top-[130px] ">
+          <div className="flex max-xl:hidden items-center rounded-xl w-[360px] p-3 h- left-[5px] justify-between text-[12px] pt-3  absolute bg-slate-100 shadow-md  opacity-100 top-[130px] ">
             <div className="flex items-center space-x-2">
               <p>
                 <Image
