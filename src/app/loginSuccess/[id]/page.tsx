@@ -21,7 +21,7 @@ export default function Home({
         const fetchData = async () => {
             try {
                 const response = await axios.post(`https://be-e-commerce-tohe.onrender.com/api/auth/login-success/${id}`);
-                router.push("/dashboard")
+                router.push("/Dashboard")
                 const user = response.data.user;               
                 setGetUserId(user); // Set the whole user object
                 localStorage.setItem("accessToken", response.data.accessToken);
