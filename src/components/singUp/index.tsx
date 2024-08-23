@@ -66,7 +66,7 @@ const SingUpForm: React.FC = () => {
   });
 
   return (
-    <div className=" grow  my-[8%] px-[30%] max-lg:px-[7%] ">
+    <div className="   my-[8%] px-[30%] max-lg:px-[7%] ">
       <form
         className="rounded-lg space-y-2 w-full h-full shadow-[0_0px_70px_-5px_rgba(0,0,0,0.1)] p-5"
         onSubmit={formik.handleSubmit}
