@@ -23,7 +23,7 @@ export default function RootLayout({
         <UserContextProvider>
           <div className="flex flex-col h-screen ">
           <Header />
-           <div className="mt-[78px]">{children}</div>
+          <div className="mt-[78px] flex-grow">{children}</div>
           <Footer />
           </div>
          
