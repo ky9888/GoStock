@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={inter.className}>
         <UserContextProvider>
-          <div className="flex flex-col h-screen">
+          <div className="mt-[78px]">{children}</div>
           <Header />
            {children}
           <Footer />
