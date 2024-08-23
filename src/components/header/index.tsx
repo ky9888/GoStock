@@ -23,7 +23,7 @@ const Header = () => {
   };
   return (
     <div
-      className={`${item}   dark:text-white  py-5 px-[7%] bg-gray-900 text-slate-200 text-[15px] sticky z-10 top-0 w-full `}
+      className={`${item}   dark:text-white  py-5 px-[7%] bg-gray-900 text-slate-200 text-[15px] fixed top-0 z-20 w-full `}
     >
       <div className={`${item} space-x-1 max-md:hidden `}>
         <p className="bg-white p-1 rounded-full">
