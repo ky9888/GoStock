@@ -91,7 +91,7 @@ const Slide = () => {
       <Slider {...settings}>
         {arr.map((e) => (
           <div key={e.name} className="px-1">
-            <div className="flex space-x-6 dark:bg-white dark:text-black justify-center text-[12px] p-3 rounded-md shadow-sm border">
+            <div className="flex space-x-6 dark:bg-white dark:text-black justify-center text-[12px] p-3 rounded-md shadow-sm border hover:translate-y-0 hover:scale-105 duration-300">
                 <div className="space-y-3">
                   <div className="flex items-center space-x-1">
                     <p className="  ">
