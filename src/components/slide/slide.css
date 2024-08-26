@@ -1,0 +1,15 @@
+.slick-prev,
+.slick-next {
+  color: #007bff; 
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #0056b3;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #007bff; 
+  font-size: 20px; 
+}
