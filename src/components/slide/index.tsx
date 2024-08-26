@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@/app/globals.css";
 import { FaLongArrowAltDown } from "react-icons/fa";
+import "./slide.css";
 
 const Slide = () => {
   const arr = [
